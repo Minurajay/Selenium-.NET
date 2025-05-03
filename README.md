@@ -1,38 +1,24 @@
-# TestProject1
+# Selenium + .NET
 
-## Overview
-A Selenium .NET automated test suite for saucedemo.com using the Page Object Model and NUnit.
+This is a Selenium WebDriver automation project using C#, NUnit, and the Page Object Model (POM) design pattern. It automates tests for the SauceDemo website.
 
-## Structure
-- **Drivers/**: WebDriver creation
-- **Pages/**: Page objects
-- **Tests/**: NUnit test classes
-- **Utils/**: Helpers for config and test data
+## Project Structure
 
-## Run Tests
-```bash
-dotnet test
-```
+- **Drivers/** - WebDriver setup and browser initialization  
+- **Pages/** - Page Object classes for each application page  
+- **Tests/** - NUnit test classes using the page objects  
+- **Utils/** - Utility classes (e.g., test data reader)  
+- **appsettings.json** - Configuration like URL, browser, credentials  
 
-## Configuration
-Update `appsettings.json` for environment details.
+## Prerequisites
 
-// TestProject1.csproj
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
-  </PropertyGroup>
+- .NET SDK installed  
+- Chrome or Firefox installed  
+- ChromeDriver or GeckoDriver in system PATH  
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.3" />
-    <PackageReference Include="NUnit" Version="3.13.3" />
-    <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
-    <PackageReference Include="Selenium.WebDriver" Version="4.18.0" />
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="124.0.6367.60" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-  </ItemGroup>
-</Project>
+## How to Run
 
-// .gitattributes
-* text=auto
+1. Clone the project  
+2. Open in Visual Studio or run via terminal  
+3. Update `appsettings.json` if needed  
+4. Run the tests using the Test Explorer or CLI:  
